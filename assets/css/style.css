@@ -1,0 +1,34 @@
+body {
+    background-color: gray;
+}
+
+.choose-char {
+    background-color: white;
+    padding: 1.5rem;
+    border: .5rem solid green;
+    margin: 0 .5rem;
+}
+
+.enemy-char {
+    background-color: white;
+    padding: 1.5rem;
+    border: .5rem solid red;
+    margin: 0 .5rem;
+}
+
+.defender-char {
+    background-color: white;
+    padding: 1.5rem;
+    border: .5rem solid black;
+    margin: 0 .5rem;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
