@@ -7,9 +7,25 @@ body {
     padding: 1.5rem;
     border: .5rem solid green;
     margin: 0 .5rem;
+    cursor: pointer;
+}
+
+.your-char {
+    background-color: white;
+    padding: 1.5rem;
+    border: .5rem solid green;
+    margin: 0 .5rem;
 }
 
 .enemy-char {
+    background-color: white;
+    padding: 1.5rem;
+    border: .5rem solid red;
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+.locked-enemy {
     background-color: white;
     padding: 1.5rem;
     border: .5rem solid red;
@@ -21,14 +37,24 @@ body {
     padding: 1.5rem;
     border: .5rem solid black;
     margin: 0 .5rem;
+    cursor: pointer;
 }
 
-.relative {
-    position: relative;
-}
+.flex-just {
+    display: flex;
+    justify-content: center;
+} 
 
-.absolute {
+.name-display {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 3%;
+    left: 50%;
+    margin-left: -62px;
+}
+
+.hp-display {
+    position: absolute;
+    bottom: -3%;
+    left: 50%;
+    margin-left: -14px;
 }

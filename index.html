@@ -21,21 +21,22 @@
     </header>
 
     <!-- INITIAL CHARACTER PICTURES -->
-    <div class="row" id="choose-section">
-        <div class="col-md-12">
-            <span class="relative">
-                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Character-1" class="choose-char" id="char-1">
-                <p class="absolute">adwbgufibdaoui</p>
-            </span>
-            <span class="relative">
-                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Character-3" class="choose-char" id="char-2">
-            </span>
-            <span class="relative">
-                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Character-4" class="choose-char" id="char-3">
-            </span>
-            <span class="relative">
-                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Character-2" class="choose-char" id="char-4">
-            </span>
+    <div class="row" id="choose-row">
+        <div class="col-md-12 flex-just" id="choose-col">
+            <div class="position-relative" id="char1-box">
+                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Character-1" class="choose-char" id="char1">
+                <!-- <p class="name-display">Character 1 name</p> -->
+                <!-- <p class="hp-display">HP#</p> -->
+            </div>
+            <div class="position-relative" id="char2-box">
+                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Character-3" class="choose-char" id="char2">
+            </div>
+            <div class="position-relative" id="char3-box">
+                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Character-4" class="choose-char" id="char3">
+            </div>
+            <div class="position-relative" id="char4-box">
+                <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=Character-2" class="choose-char" id="char4">
+            </div>
         </div>
     </div>
 
@@ -47,9 +48,11 @@
     </div>
 
     <!-- YOUR CHARACTER AVATAR -->
-    <div class="row" id="your-char-section">
-        <div class="col-md-12" id="your-char">
+    <div class="row" id="your-row">
+        <div class="col-md-12 flex-just" id="your-col">
+            <div class="position-relative" id="your-box">
 
+            </div>
         </div>
     </div>
 
@@ -61,10 +64,8 @@
     </div>
 
     <!-- ENEMY AVATARS -->
-    <div class="row" id="enemy-section">
-        <div class="col-md-12">
+    <div class="row" id="enemies-row">
 
-        </div>
     </div>
 
     <!-- FIGHT SECTION TITLE -->
@@ -89,9 +90,11 @@
     </div>
 
     <!-- DEFENDER AVATAR -->
-    <div class="row" id="defender-section">
-        <div class="col-md-12">
+    <div class="row" id="defender-row">
+        <div class="col-md-12 flex-just" id="defender-col">
+            <div class="position-relative" id="defender-box">
 
+            </div>
         </div>
     </div>
 
@@ -105,6 +108,7 @@
 
 </body>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="assets/javascript/game.js"></script>
 
 </html>
