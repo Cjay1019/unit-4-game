@@ -1,41 +1,45 @@
+html {
+    background-image: url(../images/map.jpg);
+}
+
 body {
-    background-color: gray;
+    font-family: 'Kaushan Script', cursive;
+    position: relative;   
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../images/parchment.png);
+    background-size: 100% 156%;
+    background-position: center;
+}
+
+header {
+    margin-bottom: 5%;
+}
+
+.portrait {
+    width: 250px;
+    height: auto;
 }
 
 .choose-char {
-    background-color: white;
-    padding: 1.5rem;
-    border: .5rem solid green;
     margin: 0 .5rem;
     cursor: pointer;
 }
 
 .your-char {
-    background-color: white;
-    padding: 1.5rem;
-    border: .5rem solid green;
     margin: 0 .5rem;
 }
 
 .enemy-char {
-    background-color: white;
-    padding: 1.5rem;
-    border: .5rem solid red;
     margin: 0 .5rem;
     cursor: pointer;
 }
 
 .locked-enemy {
-    background-color: white;
-    padding: 1.5rem;
-    border: .5rem solid red;
     margin: 0 .5rem;
 }
 
 .defender-char {
-    background-color: white;
-    padding: 1.5rem;
-    border: .5rem solid black;
     margin: 0 .5rem;
     cursor: pointer;
 }
@@ -46,15 +50,57 @@ body {
 } 
 
 .name-display {
+    font-family: 'Montserrat Alternates', sans-serif; 
     position: absolute;
     top: 3%;
     left: 50%;
     margin-left: -62px;
 }
 
-.hp-display {
+.hp-display {    
+    font-family: 'Montserrat Alternates', sans-serif; 
     position: absolute;
-    bottom: -3%;
-    left: 50%;
+    bottom: 6%;
+    left: 47%;
     margin-left: -14px;
+    color: white;
+    font-size: 15px;
+}
+
+#attack {
+    font-family: 'Montserrat Alternates', sans-serif; 
+    position: absolute;
+    left: 41%;
+    bottom: 10%;
+}
+
+.alerts {
+    font-weight: bold;
+}
+
+#end-screen {
+    font-family: 'Montserrat Alternates', sans-serif; 
+    position: absolute;
+    top: -7px;
+    left: 5%;
+    height: 100.7%;
+    width: 90%;
+    background-image: url(../images/win.png);
+    background-size: 100%;
+}
+
+#defeated {
+    position: relative;
+    top: 20%;
+}
+
+#win-lose {
+    position: relative;
+    top: 65%;
+}
+
+.end-port {
+    position: absolute;
+    top: 30%;
+    left: 37%;
 }
