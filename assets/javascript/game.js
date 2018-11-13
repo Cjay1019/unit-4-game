@@ -117,7 +117,7 @@ $("#attack").on("click", function () {
     if (characters[yourChar].currentHp < 1) {
         $("#" + yourChar + "-hp").text("0/" + characters[yourChar].maxHp);
         gameStatus = "lost";
-        $("#game-over").attr("id", "end-screen");
+        $("#game-over").hide().attr("id", "end-screen").show("fast");
         $("#end-screen").append("<h2 id='win-lose'>You Lost</h2>");
         $("#" + defenderChar).appendTo("#end-screen");
         $("#" + defenderChar).attr("class", "your-char portrait end-port");
@@ -132,14 +132,14 @@ $("#attack").on("click", function () {
         $("#defender-char-title").html("<h2></h2>");
         $("#attack").hide();
         characters[defenderChar].status = "complete";
-        $("#" + defenderChar).remove();
+        $("#" + defenderChar).fadeOut("slow").remove();
         $("#" + defenderChar + "-hp").remove();
         $("#" + defenderChar + "-name").remove();
         $(".locked-enemy").attr("class", "enemy-char portrait");
     }
     if (characters.char1.status === "complete" && characters.char2.status === "complete" && characters.char3.status === "complete" && characters.char4.status === "complete") {
         gameStatus = "won";
-        $("#game-over").attr("id", "end-screen");
+        $("#game-over").hide().attr("id", "end-screen").show("  fast");
         $("#end-screen").append("<h2 id='win-lose'>You Win!</h2>");
         $("#" + yourChar).appendTo("#end-screen");
         $("#" + yourChar).attr("class", "your-char portrait end-port");
