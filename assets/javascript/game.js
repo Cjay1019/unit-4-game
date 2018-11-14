@@ -209,10 +209,11 @@ $("#attack").on("click", function() {
     $("#defender-char-title").html("<h2></h2>");
     $("#attack").hide();
     characters[defenderChar].status = "complete";
-    $("#" + defenderChar).fadeOut("slow");
-    setTimeout(function() {
-      $("#" + defenderChar).remove;
-    }, 3000);
+    // $("#" + defenderChar).fadeOut("slow");
+    // setTimeout(function() {
+    //   $("#" + defenderChar).remove();
+    // }, 3000);
+    $("#" + defenderChar).remove();
     $("#" + defenderChar + "-hp").remove();
     $("#" + defenderChar + "-name").remove();
     $(".locked-enemy").attr("class", "enemy-char portrait");
