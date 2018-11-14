@@ -155,9 +155,12 @@ $("body").on("click", "img", function(e) {
   }
 });
 // Attack button adjusts hp and alerts damage numbers
-$("#attack").on("click", function() {
-  characters[defenderChar].currentHp =
-    characters[defenderChar].currentHp - characters[yourChar].scalingAttack;
+$("#alert-col").on("click", "#attack", function() {
+  $("#attack").attr("id", "disabled");
+  setTimeout(function() {
+    $("#disabled").attr("id", "attack");
+  }, 500);
+  characters[defenderChar].currentHp -= characters[yourChar].scalingAttack;
   $("#" + defenderChar + "-hp").text(
     characters[defenderChar].currentHp + "/" + characters[defenderChar].maxHp
   );
@@ -168,8 +171,7 @@ $("#attack").on("click", function() {
       characters[yourChar].scalingAttack +
       " hp!"
   );
-  characters[yourChar].scalingAttack =
-    characters[yourChar].scalingAttack + characters[yourChar].baseAttack;
+  characters[yourChar].scalingAttack += characters[yourChar].baseAttack;
   if (characters[defenderChar].currentHp > 0) {
     characters[yourChar].currentHp =
       characters[yourChar].currentHp - characters[defenderChar].counter;
@@ -207,12 +209,12 @@ $("#attack").on("click", function() {
     $("#alert-1").text("You defeated " + characters[defenderChar].name + "!");
     $("#enemy-char-title").html("<h2>Choose An Enemy to Attack</h2>");
     $("#defender-char-title").html("<h2></h2>");
-    $("#attack").hide();
+    $("#disabled").hide();
     characters[defenderChar].status = "complete";
     // $("#" + defenderChar).fadeOut("slow");
     // setTimeout(function() {
-    //   $("#" + defenderChar).remove();
-    // }, 3000);
+    //   $("#" + defenderChar).remove("fast");
+    // }, 1000);
     $("#" + defenderChar).remove();
     $("#" + defenderChar + "-hp").remove();
     $("#" + defenderChar + "-name").remove();
@@ -317,3 +319,9 @@ $("#reset-btn").on("click", function() {
   $("#enemy-char-title").html("");
   $("#choose-char-title").html("<h2>Choose Your Character</h2>");
 });
+
+// $(document).keyup(function(e) {
+//   if (e.keycode === 13) {
+//     $("#reset-btn").click();
+//   }
+// });
