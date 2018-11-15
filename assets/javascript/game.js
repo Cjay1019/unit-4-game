@@ -129,6 +129,7 @@ $("body").on("click", "img", function(e) {
     $("#alert-1").text("Click The Attack Button to Fight");
     $("#alert-2").text("Click The Defender to Choose A New Enemy");
     defenderChar = [idString];
+    $("body").css("height", "100vh");
   }
   // Deselects defender and unlocks all enemies
   if (classString.includes("defender-char") && gameStatus === "ongoing") {
@@ -319,9 +320,14 @@ $("#reset-btn").on("click", function() {
   $("#enemy-char-title").html("");
   $("#choose-char-title").html("<h2>Choose Your Character</h2>");
 });
-
-// $(document).keyup(function(e) {
-//   if (e.keycode === 13) {
-//     $("#reset-btn").click();
-//   }
-// });
+// Pressing enter for buttons
+$(document).keypress(function(e) {
+  var key = e.which;
+  if (key == 13 && gameStatus !== "ongoing") {
+    $("#reset-btn").click();
+    return false;
+  } else if (key == 13 && characters[defenderChar].name !== "filler") {
+    $("#attack").click();
+    return false;
+  }
+});
