@@ -129,7 +129,6 @@ $("body").on("click", "img", function(e) {
     $("#alert-1").text("Click The Attack Button to Fight");
     $("#alert-2").text("Click The Defender to Choose A New Enemy");
     defenderChar = [idString];
-    $("body").css("height", "100vh");
   }
   // Deselects defender and unlocks all enemies
   if (classString.includes("defender-char") && gameStatus === "ongoing") {
