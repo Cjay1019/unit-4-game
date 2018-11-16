@@ -7,6 +7,7 @@ body {
   font-family: "Kaushan Script", cursive;
   position: relative;
   background: none;
+  min-height: 100vh;
   background: url(../images/parch2.jpg);
   border-left: 5px ridge bisque;
   border-right: 5px ridge bisque;
@@ -15,13 +16,6 @@ body {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
-/* #background-settings {
-  position: fixed;
-  height: 200%;
-  width: 100%;
-  background: url(../images/parchment.png) no-repeat;
-} */
 
 header {
   padding-top: 2%;
