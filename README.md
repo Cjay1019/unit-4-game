@@ -1,7 +1,7 @@
 # Forgotten Realms RPG
 
 This application is a basic role playing game set in the world of the Forgotten Realms, a setting that is primarily used in the Dungeons and Dragons table top game.
-The project was primarily created with Javascript, utilizing jQuery to dynamically create and manipulate html elements.
+The project was primarily created with Javascript, utilizing jQuery to dynamically create and manipulate html elements. https://cjay1019.github.io/unit-4-game/
 
 ## Objective
 

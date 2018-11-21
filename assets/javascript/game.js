@@ -322,11 +322,8 @@ $("#reset-btn").on("click", function() {
 // Pressing enter for buttons
 $(document).keypress(function(e) {
   var key = e.which;
-  if (key == 13 && gameStatus !== "ongoing") {
+  if (key == 13) {
     $("#reset-btn").click();
-    return false;
-  } else if (key == 13 && characters[defenderChar].name !== "filler") {
-    $("#attack").click();
     return false;
   }
 });
